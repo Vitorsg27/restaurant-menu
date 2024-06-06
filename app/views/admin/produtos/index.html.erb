@@ -1,0 +1,28 @@
+<h1>Produtos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Quantidade</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @produtos.each do |produto| %>
+      <tr>
+        <td><%= produto.nome %></td>
+        <td><%= produto.descricao %></td>
+        <td><%= produto.quantidade %></td>
+        <td>
+          <%= link_to 'Mostrar', admin_produto_path(produto) %>
+          <%= link_to 'Editar', edit_admin_produto_path(produto) %>
+          <%= link_to 'Excluir', admin_produto_path(produto), method: :delete, data: { confirm: 'Você tem certeza?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Novo Produto', new_admin_produto_path %>
