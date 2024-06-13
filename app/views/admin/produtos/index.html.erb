@@ -5,7 +5,7 @@
     <tr>
       <th>Nome</th>
       <th>Descrição</th>
-      <th>Quantidade</th>
+      <th>Preço</th>
       <th>Ações</th>
     </tr>
   </thead>
@@ -14,11 +14,14 @@
       <tr>
         <td><%= produto.nome %></td>
         <td><%= produto.descricao %></td>
-        <td><%= produto.quantidade %></td>
+        <td><%= produto.preco %></td>
         <td>
           <%= link_to 'Mostrar', admin_produto_path(produto) %>
           <%= link_to 'Editar', edit_admin_produto_path(produto) %>
-          <%= link_to 'Excluir', admin_produto_path(produto), method: :delete, data: { confirm: 'Você tem certeza?' } %>
+          <%= link_to 'Excluir', admin_produto_path(produto), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Tem certeza que quer excluir?"
+                  } %>
         </td>
       </tr>
     <% end %>

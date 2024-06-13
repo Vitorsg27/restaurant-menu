@@ -40,7 +40,7 @@ module Api
         private
   
         def produto_params
-          params.require(:produto).permit(:nome, :descricao, :quantidade)
+          params.require(:produto).permit(:nome, :descricao, :preco)
         end
       end
     end
