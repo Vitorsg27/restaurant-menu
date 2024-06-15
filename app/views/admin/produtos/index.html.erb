@@ -11,10 +11,10 @@
   </thead>
   <tbody>
     <% @produtos.each do |produto| %>
-      <tr class="hover:bg-gray-100">
+      <tr class="hover:bg-white">
         <td class="p-4 text-gray-600"><%= produto.nome %></td>
         <td class="p-4 text-gray-600"><%= produto.descricao %></td>
-        <td class="p-4 text-gray-600"><%= produto.preco %></td>
+        <td class="p-4 text-gray-600">R$ <%= produto.preco %></td>
         <td class="p-4 text-gray-600">
           <%= link_to 'Mostrar', admin_produto_path(produto), class: "text-gray-600 hover:text-gray-900" %>
           <%= link_to 'Editar', edit_admin_produto_path(produto), class: "text-gray-600 hover:text-gray-900" %>
@@ -28,5 +28,5 @@
   </tbody>
 </table>
 
-<%= link_to 'Novo Produto', new_admin_produto_path, class: "text-gray-600 hover:text-gray-900" %>
+<%= link_to 'Novo Produto', new_admin_produto_path, class: "text-gray-600 hover:bg-blue-200" %>
 

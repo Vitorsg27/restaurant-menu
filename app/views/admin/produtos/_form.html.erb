@@ -25,6 +25,11 @@
     <%= form.number_field :preco , step: '0.01'%>
   </div>
 
+  <div class="field">
+    <%= form.label :categoria %>
+    <%= form.text_field :categoria %>
+  </div>
+
   <div class="actions">
     <%= form.submit "Salvar", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
   </div>
