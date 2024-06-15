@@ -1,31 +1,32 @@
-<h1>Produtos</h1>
+<h1 class="text-3xl font-bold text-gray-800">Produtos</h1>
 
-<table>
+<table class="w-full text-left border-collapse">
   <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Descrição</th>
-      <th>Preço</th>
-      <th>Ações</th>
+    <tr class="bg-gray-100">
+      <th class="p-4 text-gray-600">Nome</th>
+      <th class="p-4 text-gray-600">Descrição</th>
+      <th class="p-4 text-gray-600">Preço</th>
+      <th class="p-4 text-gray-600">Ações</th>
     </tr>
   </thead>
   <tbody>
     <% @produtos.each do |produto| %>
-      <tr>
-        <td><%= produto.nome %></td>
-        <td><%= produto.descricao %></td>
-        <td><%= produto.preco %></td>
-        <td>
-          <%= link_to 'Mostrar', admin_produto_path(produto) %>
-          <%= link_to 'Editar', edit_admin_produto_path(produto) %>
+      <tr class="hover:bg-gray-100">
+        <td class="p-4 text-gray-600"><%= produto.nome %></td>
+        <td class="p-4 text-gray-600"><%= produto.descricao %></td>
+        <td class="p-4 text-gray-600"><%= produto.preco %></td>
+        <td class="p-4 text-gray-600">
+          <%= link_to 'Mostrar', admin_produto_path(produto), class: "text-gray-600 hover:text-gray-900" %>
+          <%= link_to 'Editar', edit_admin_produto_path(produto), class: "text-gray-600 hover:text-gray-900" %>
           <%= link_to 'Excluir', admin_produto_path(produto), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Tem certeza que quer excluir?"
-                  } %>
+                  }, class: "text-gray-600 hover:text-gray-900" %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to 'Novo Produto', new_admin_produto_path %>
+<%= link_to 'Novo Produto', new_admin_produto_path, class: "text-gray-600 hover:text-gray-900" %>
+
