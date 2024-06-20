@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   namespace :api do
     namespace :v1 do
       resources :produtos
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
     resources :produtos
   end
   
-  root "admin/produtos#index"
+  root "menu#index"
 
   get 'menu', to: 'menu#index'
 end
