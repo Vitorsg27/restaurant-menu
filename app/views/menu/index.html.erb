@@ -1,8 +1,9 @@
 <section class="my-12 max-w-screen-xl mx-auto px-6">
 <div class="flex items-center justify-center space-x-6">
-  <p class="active_menu_tab poppins bg-primary">Lanches</p>
-  <p class="menu_tab poppins">Almoço</p>
-  <p class="menu_tab poppins">Bebidas</p>
+    <%= link_to 'Todos', menu_path, class: "#{'underline' if params[:categoria] == nil}" %>
+    <%= link_to 'Lanches', menu_path(categoria: 'Lanches'), class: "#{'underline' if params[:categoria] == 'Lanches'}" %>
+    <%= link_to 'Almoço', menu_path(categoria: 'Almoço'), class: "#{'underline' if params[:categoria] == 'Almoço'}" %>
+    <%= link_to 'Bebidas', menu_path(categoria: 'Bebidas'), class: "#{'underline' if params[:categoria] == 'Bebidas'}" %>
 </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
     <% @produtos.each do |produto| %>
