@@ -1,4 +1,7 @@
-<h1 class="text-3xl font-bold text-gray-800 text-center">Produtos</h1>
+
+<%= link_to 'Categorias', categories_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white font-medium m-5"%>
+<%= link_to 'Cardapio', menu_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white font-medium m-5"%>
+<h1 class="text-3xl font-bold text-gray-800 text-center mt-8">Produtos</h1>
 
 <table class="w-full text-left border-collapse">
   <thead>
@@ -6,6 +9,7 @@
       <th class="p-4 text-gray-600">Nome</th>
       <th class="p-4 text-gray-600">Descrição</th>
       <th class="p-4 text-gray-600">Preço</th>
+      <th class="p-4 text-gray-600">Categoria</th>
       <th class="p-4 text-gray-600">Ações</th>
     </tr>
   </thead>
@@ -15,6 +19,7 @@
         <td class="p-4 text-gray-600"><%= produto.nome %></td>
         <td class="p-4 text-gray-600"><%= produto.descricao %></td>
         <td class="p-4 text-gray-600">R$ <%= produto.preco %></td>
+        <td class="p-4 text-gray-600"><%= produto.category.name %></td>
         <td class="p-4 text-gray-600">
           <%= link_to 'Mostrar', admin_produto_path(produto), class: "text-gray-600 hover:text-gray-900" %>
           <%= link_to 'Editar', edit_admin_produto_path(produto), class: "text-gray-600 hover:text-gray-900" %>
