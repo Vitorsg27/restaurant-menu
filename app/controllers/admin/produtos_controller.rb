@@ -47,7 +47,7 @@ module Admin
       end
   
       def produto_params
-        params.require(:produto).permit(:nome, :descricao, :preco, :category_id)
+        params.require(:produto).permit(:nome, :descricao, :preco, :category_id, :image_file)
       end
     end
   end

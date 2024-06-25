@@ -15,5 +15,14 @@
   <%= @produto.category.name %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <% if @produto.image_file.attached? %>
+    <%= image_tag @produto.image_file, class: "w-64 transform transition duration-300 hover:scale-105" %>
+  <% else %>
+    No image uploaded
+  <% end %>
+</p>
+
 <%= link_to 'Editar', edit_admin_produto_path(@produto) %> |
 <%= link_to 'Voltar', admin_produtos_path %>

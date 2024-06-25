@@ -26,6 +26,15 @@
   </div>
 
   <div class="field">
+    <strong>Image:</strong>
+    <% if produto.image_file.attached? %>
+      <%= image_tag produto.image_file, class: "w-64 transform transition duration-300 hover:scale-105" %>
+    <% end %>
+    <%= form.label :image_file %>
+    <%= form.file_field :image_file %>
+  </div>
+
+  <div class="field">
     <%= form.label :category_id, "Categoria" %>
     <%= form.collection_select :category_id, Category.all, :id, :name %>
   </div>
