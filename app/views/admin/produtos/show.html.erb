@@ -1,28 +1,34 @@
-<h1><%= @produto.nome %></h1>
+<div class="container mx-auto px-4 py-8 max-w-lg">
+  <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center"><%= @produto.nome %></h1>
 
-<p>
-  <strong>Descrição:</strong>
-  <%= @produto.descricao %>
-</p>
+  <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+    <p class="mb-4">
+      <strong class="block text-gray-700 text-sm font-medium">Descrição:</strong>
+      <span class="block text-gray-600 mt-1"><%= @produto.descricao %></span>
+    </p>
 
-<p>
-  <strong>Preco:</strong>
-  <%= @produto.preco %>
-</p>
+    <p class="mb-4">
+      <strong class="block text-gray-700 text-sm font-medium">Preço:</strong>
+      <span class="block text-gray-600 mt-1">R$ <%= @produto.preco %></span>
+    </p>
 
-<p>
-  <strong>Categoria:</strong>
-  <%= @produto.category.name %>
-</p>
+    <p class="mb-4">
+      <strong class="block text-gray-700 text-sm font-medium">Categoria:</strong>
+      <span class="block text-gray-600 mt-1"><%= @produto.category.name %></span>
+    </p>
 
-<p>
-  <strong>Image:</strong>
-  <% if @produto.image_file.attached? %>
-    <%= image_tag @produto.image_file, class: "w-64 transform transition duration-300 hover:scale-105" %>
-  <% else %>
-    No image uploaded
-  <% end %>
-</p>
+    <p class="mb-4">
+      <strong class="block text-gray-700 text-sm font-medium">Imagem:</strong>
+      <% if @produto.image_file.attached? %>
+        <%= image_tag @produto.image_file, class: "w-64 transform transition duration-300 hover:scale-105 mt-2" %>
+      <% else %>
+        <span class="block text-gray-600 mt-1">Nenhuma imagem carregada</span>
+      <% end %>
+    </p>
+  </div>
 
-<%= link_to 'Editar', edit_admin_produto_path(@produto) %> |
-<%= link_to 'Voltar', admin_produtos_path %>
+  <div class="flex justify-between">
+    <%= link_to 'Editar', edit_admin_produto_path(@produto), class: "bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded transition duration-300" %>
+    <%= link_to 'Voltar', admin_produtos_path, class: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition duration-300" %>
+  </div>
+</div>

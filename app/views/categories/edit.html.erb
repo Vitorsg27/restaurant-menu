@@ -1,8 +1,12 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">Editing category</h1>
+<div class="container mx-auto px-4 py-8 max-w-3xl">
+  <div class="bg-white shadow-lg rounded-lg p-6">
+    <h1 class="font-bold text-4xl text-gray-800 mb-6">Editando categoria</h1>
 
-  <%= render "form", category: @category %>
+    <%= render "form", category: @category %>
 
-  <%= link_to "Show this category", @category, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  <%= link_to "Back to categories", categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="flex justify-end mt-6 space-x-4">
+      <%= link_to "Mostrar esta categoria", @category, class: "rounded-lg py-3 px-5 bg-gray-100 font-medium text-gray-700 hover:bg-gray-200 transition duration-300" %>
+      <%= link_to "Voltar às categorias", categories_path, class: "rounded-lg py-3 px-5 bg-gray-100 font-medium text-gray-700 hover:bg-gray-200 transition duration-300" %>
+    </div>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="mx-auto md:w-2/3 w-full flex">
+<div class="container mx-auto px-4 py-8 max-w-3xl bg-white shadow-md rounded-lg p-6 mt-6">
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
@@ -6,10 +6,10 @@
 
     <%= render @category %>
 
-    <%= link_to "Edit this category", edit_category_path(@category), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Back to categories", categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this category", @category, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    <div class="flex space-x-4 mt-6">
+      <%= link_to "Editar esta categoria", edit_category_path(@category), class: "rounded-lg py-3 px-5 bg-gray-100 font-medium text-gray-700 hover:bg-gray-200 transition duration-300" %>
+      <%= link_to "Voltar às categorias", categories_path, class: "rounded-lg py-3 px-5 bg-gray-100 font-medium text-gray-700 hover:bg-gray-200 transition duration-300" %>
+      <%= button_to "Excluir esta categoria", @category, method: :delete, class: "rounded-lg py-3 px-5 bg-red-500 text-white font-medium hover:bg-red-600 transition duration-300" %>
     </div>
   </div>
 </div>
