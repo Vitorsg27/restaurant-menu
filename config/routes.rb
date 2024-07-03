@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :categories
   
-  devise_for :users, skip: [:registrations]
+  devise_for :users
 
   namespace :api do
     namespace :v1 do
