@@ -23,7 +23,7 @@
             <td class="p-4 text-gray-700"><%= produto.nome %></td>
             <td class="p-4 text-gray-700"><%= produto.descricao %></td>
             <td class="p-4 text-gray-700">R$ <%= produto.preco %></td>
-            <td class="p-4 text-gray-700"><%= produto.category.name %></td>
+            <td class="p-4 text-gray-700"><%= produto.category&.name %></td>
             <td class="p-4 text-gray-700">
               <%= link_to 'Mostrar', admin_produto_path(produto), class: "text-blue-600 hover:text-blue-800 transition" %>
               <%= link_to 'Editar', edit_admin_produto_path(produto), class: "text-yellow-600 hover:text-yellow-800 transition" %>

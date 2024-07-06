@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-    has_many :produtos
+    has_many :produtos, dependent: :nullify
 end
