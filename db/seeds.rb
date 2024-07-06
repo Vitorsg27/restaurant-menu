@@ -11,4 +11,9 @@
 User.find_or_create_by!(email: 'admin@admin.com') do |user|
     user.password = 'admin123'
     user.password_confirmation = 'admin123'
+    user.admin = true
+end
+
+Category.find_or_create_by!(name: 'Categoria 1') do |category|
+    category.name = 'Categoria 1'
 end
