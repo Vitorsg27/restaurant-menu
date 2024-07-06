@@ -14,17 +14,17 @@
     <div class="space-y-4">
       <div class="field">
         <%= form.label :nome, class: "block text-sm font-medium text-gray-700" %>
-        <%= form.text_field :nome, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" %>
+        <%= form.text_field :nome, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm", required: true %>
       </div>
 
       <div class="field">
         <%= form.label :descricao, class: "block text-sm font-medium text-gray-700" %>
-        <%= form.text_area :descricao, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" %>
+        <%= form.text_area :descricao, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" , required: true %>
       </div>
 
       <div class="field">
         <%= form.label :preco, class: "block text-sm font-medium text-gray-700" %>
-        <%= form.number_field :preco, step: '0.01', class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" %>
+        <%= form.number_field :preco, step: '0.01', class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm", required: true %>
       </div>
 
       <div class="field">
@@ -38,7 +38,7 @@
 
       <div class="field">
         <%= form.label :category_id, "Categoria", class: "block text-sm font-medium text-gray-700" %>
-        <%= form.collection_select :category_id, Category.all, :id, :name, {}, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" %>
+        <%= form.collection_select :category_id, Category.all, :id, :name, {}, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm", required: true %>
       </div>
 
       <div class="actions">
