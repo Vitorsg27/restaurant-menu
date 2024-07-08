@@ -4,7 +4,7 @@ module Admin
       before_action :authenticate_user!
   
       def index
-        @produtos = Produto.all
+        @produtos = Produto.order(:category_id.name)
       end
   
       def show

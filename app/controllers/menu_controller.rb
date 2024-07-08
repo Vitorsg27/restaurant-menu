@@ -6,7 +6,7 @@ class MenuController < ApplicationController
       categoria = Category.find_by(name: params[:categoria])
       @produtos = Produto.where(category_id: categoria)
     else
-      @produtos = Produto.all
+      @produtos = Produto.order(:category_id.name)
     end
   end
 
