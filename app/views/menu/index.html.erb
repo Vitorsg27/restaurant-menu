@@ -10,7 +10,7 @@
       <div class="bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative">
         <span class="bg-red-100 border border-red-500 rounded-full text-primary text-sm poppins px-4 py-1 inline-block mb-4 "><%= produto.category.name %></span>
         <% if produto.image_file.attached? %>
-          <%= image_tag produto.image_file, class: "w-64 mx-auto transform transition duration-300 hover:scale-105", alt: produto.nome %>
+          <%= image_tag produto.thumbnail, loading: "lazy",  class: "w-64 mx-auto transform transition duration-300 hover:scale-105", alt: produto.nome %>
         <% else %>
           <p>Sem imagem</p>
         <% end %>
