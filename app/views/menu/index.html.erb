@@ -1,8 +1,8 @@
 <section class="my-12 max-w-screen-xl mx-auto px-6">
   <div class="flex flex-wrap items-center justify-center space-x-4 space-y-4 my-4 ">
-    <%= link_to 'Todos', menu_path, class: "mt-4 text-lg font-medium text-gray-700 bg-white border border-gray-300 rounded-lg py-2 px-4 shadow-sm hover:bg-gray-500 hover:text-white transition duration-300 #{'bg-gray-600 text-white' if params[:categoria] == nil}" %>
+    <%= link_to 'Todos', menu_path, class: "mt-4 text-lg font-medium text-gray-700 bg-white border border-gray-300 rounded-lg py-2 px-4 shadow-sm hover:bg-gray-500 hover:text-white transition duration-300 #{'bg-black text-white underline' if params[:categoria] == nil}" %>
     <% @category.each do |categoria| %>
-      <%= link_to categoria.name, menu_path(categoria: categoria.name), class: "text-lg font-medium text-gray-700 bg-white border border-gray-300 rounded-lg py-2 px-4 shadow-sm hover:bg-gray-500 hover:text-white transition duration-300 #{'bg-gray-600 text-white' if params[:categoria] == categoria.name}" %>
+      <%= link_to categoria.name, menu_path(categoria: categoria.name), class: "text-lg font-medium text-gray-700 bg-white border border-gray-300 rounded-lg py-2 px-4 shadow-sm hover:bg-gray-500 hover:text-white transition duration-300 #{'bg-black text-white underline' if params[:categoria] == categoria.name}" %>
     <% end %>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
@@ -17,7 +17,9 @@
         <div class="flex flex-col items-center my-3 space-y-2">
           <h1 class="text-gray-900 poppins text-lg"><%= produto.nome %></h1>
           <p class="text-gray-500 poppins text-sm text-center"><%= produto.descricao %></p>
-          <h2 class="text-gray-900 poppins text-2xl font-bold">R$<%= produto.preco %></h2>
+          <h2 class="text-gray-900 poppins text-2xl font-bold">
+            <%= number_to_currency(produto.preco) %>
+          </h2>
         </div>
       </div>
     <% end %>
