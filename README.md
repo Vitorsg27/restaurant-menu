@@ -44,19 +44,13 @@ Follow these instructions to set up the project on your local machine.
     rails db:migrate
     ```
 
-4. **Install JavaScript dependencies:**
-
-    ```sh
-    yarn install
-    ```
-
-5. **Run the server:**
+4. **Run the server:**
 
     ```sh
     rails server
     ```
 
-6. **Open your browser and navigate to:**
+5. **Open your browser and navigate to:**
 
     ```
     http://localhost:3000
@@ -65,6 +59,8 @@ Follow these instructions to set up the project on your local machine.
 ## Usage
 
 ### Admin Panel
+
+To access the admin panel, navigate to `/admin`:
 
 - Add, edit, and delete categories.
 - Add, edit, and delete products.
