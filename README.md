@@ -27,8 +27,8 @@ Follow these instructions to set up the project on your local machine.
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/your-username/restaurant-inventory-management.git
-    cd restaurant-inventory-management
+    git clone https://github.com/vitorsg27/restaurant-menu.git
+    cd restaurant-menu
     ```
 
 2. **Install the gems:**
