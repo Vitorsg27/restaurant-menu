@@ -18,12 +18,12 @@
           <th class="p-4 text-gray-600 font-medium">Ações</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-gray-200">
+      <tbody class="divide-y divide-gray-200 text-center">
         <% @produtos.each do |produto| %>
           <tr class="hover:bg-gray-50 transition">
             <td class="p-4 text-gray-700"><%= produto.nome %></td>
             <td class="p-4 text-gray-700"><%= produto.descricao %></td>
-            <td class="p-4 text-gray-700">R$ <%= produto.preco %></td>
+            <td class="p-4 text-gray-700"><%= number_to_currency(produto.preco) %></td>
             <td class="p-4 text-gray-700"><%= produto.category&.name %></td>
             <td class="p-4 text-gray-700">
               <%= link_to 'Mostrar', admin_produto_path(produto), class: "text-blue-600 hover:text-blue-800 transition" %>
