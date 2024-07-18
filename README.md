@@ -1,27 +1,94 @@
-# README
+# Restaurant Inventory Management System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails application for managing a restaurant's inventory and menu. It includes functionalities for adding, editing, and removing products and categories, user authentication, and an interface for customers to view the menu.
 
-Things you may want to cover:
+## Table of Contents
 
-* Ruby version
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-* System dependencies
+## Getting Started
 
-* Configuration
+Follow these instructions to set up the project on your local machine.
 
-* Database creation
+## Prerequisites
 
-* Database initialization
+- Ruby 2.7 or higher
+- Rails 6 or higher
+- PostgreSQL or SQLite
+- ImageMagick or GraphicsMagick (for image processing)
 
-* How to run the test suite
+## Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+1. **Clone the repository:**
 
-* Deployment instructions
+    ```sh
+    git clone https://github.com/your-username/restaurant-inventory-management.git
+    cd restaurant-inventory-management
+    ```
 
-* ...
-# restaurante-estoque
-# restaurante-estoque
-# restaurante-estoque
+2. **Install the gems:**
+
+    ```sh
+    bundle install
+    ```
+
+3. **Set up the database:**
+
+    ```sh
+    rails db:create
+    rails db:migrate
+    ```
+
+4. **Install JavaScript dependencies:**
+
+    ```sh
+    yarn install
+    ```
+
+5. **Run the server:**
+
+    ```sh
+    rails server
+    ```
+
+6. **Open your browser and navigate to:**
+
+    ```
+    http://localhost:3000
+    ```
+
+## Usage
+
+### Admin Panel
+
+- Add, edit, and delete categories.
+- Add, edit, and delete products.
+
+### User Authentication
+
+- Sign up
+- Log in
+- Edit account details
+- Change password
+
+### Menu
+
+- View the list of categories
+- View the products within a category
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
